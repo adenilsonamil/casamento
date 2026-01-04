@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Jéssica & Adenilson</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<section class="hero">
+<p style="margin-top:15px; font-size:0.9em; color:#888;">
+  Agosto • Anápolis – GO
+</p>
+
+  <h1>Jéssica & Adenilson</h1>
+  <p>
+    Com alegria e responsabilidade, decidimos dar este passo diante de Deus
+    e das pessoas que amamos.
+  </p>
+</section>
+
+<section class="local">
+  <h2>Local da cerimônia</h2>
+
+  <p>
+    Igreja Católica – Anápolis<br>
+    <span class="endereco">
+      Endereço da igreja, Anápolis – GO
+    </span>
+  </p>
+
+  <a
+    class="btn-mapa"
+    href="https://www.google.com/maps/search/?api=1&query=ENDERECO_DA_IGREJA_AQUI"
+    target="_blank"
+  >
+    Ver no mapa
+  </a>
+</section>
+
+
+<section class="presentes">
+  <h2>Como presentear</h2>
+  <p class="texto">
+    Já construímos nosso lar e não esperamos presentes.<br>
+    Para quem desejar participar de forma simbólica deste novo passo,
+    deixamos abaixo algumas formas de contribuição, todas opcionais.
+  </p>
+
+  <div class="cotas">
+    <button onclick="mostrarPix()">🏡 Construção do nosso lar</button>
+    <button onclick="mostrarPix()">🔥 Almoço de celebração</button>
+    <button onclick="mostrarPix()">🌱 Projeto família</button>
+    <button onclick="mostrarPix()">✈️ Lua de mel</button>
+    <button onclick="mostrarPix()">❤️ Apoio ao nosso início</button>
+  </div>
+
+  <div id="pix" class="pix hidden">
+    <p>Se desejar contribuir de forma prática, utilize o QR Code abaixo:</p>
+    <img src="assets/pix.png" alt="QR Code PIX">
+    <p class="pix-chave">Chave PIX: <strong>59c552b7-aa3a-4d5c-accf-e9c88ecaad44</strong></p>
+  </div>
+</section>
+
+<footer>
+  <p>
+    Nossa maior alegria será celebrar este momento com você.<br>
+    Com carinho, Jéssica & Adenilson.
+  </p>
+</footer>
+
+<script>
+function mostrarPix() {
+  document.getElementById("pix").classList.toggle("hidden");
+}
+</script>
+
+</body>
+</html>

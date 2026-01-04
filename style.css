@@ -211,3 +211,24 @@ footer {
   background: #c1a46d;
   color: #fff;
 }
+.btn-copiar {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: transparent;
+  border: 1px solid #c1a46d;
+  color: #2f2f2f;
+  font-size: 0.9em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-copiar:hover {
+  background: #c1a46d;
+  color: #fff;
+}
+
+.copiado {
+  margin-top: 8px;
+  font-size: 0.85em;
+  color: #6a8f6a; /* verde discreto */
+}

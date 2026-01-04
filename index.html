@@ -9,9 +9,9 @@
 <body>
 
 <section class="hero">
-<p style="margin-top:15px; font-size:0.9em; color:#888;">
-  Agosto • Anápolis – GO
-</p>
+  <p style="margin-top:15px; font-size:0.9em; color:#888;">
+    Agosto • Anápolis – GO
+  </p>
 
   <h1>Jéssica & Adenilson</h1>
   <p>
@@ -39,7 +39,6 @@
   </a>
 </section>
 
-
 <section class="presentes">
   <h2>Como presentear</h2>
   <p class="texto">
@@ -58,8 +57,21 @@
 
   <div id="pix" class="pix hidden">
     <p>Se desejar contribuir de forma prática, utilize o QR Code abaixo:</p>
+
     <img src="assets/pix.png" alt="QR Code PIX">
-    <p class="pix-chave">Chave PIX: <strong>59c552b7-aa3a-4d5c-accf-e9c88ecaad44</strong></p>
+
+    <p class="pix-chave">
+      Chave PIX:
+      <strong id="pixKey">59c552b7-aa3a-4d5c-accf-e9c88ecaad44</strong>
+    </p>
+
+    <button class="btn-copiar" onclick="copiarPix()">
+      Copiar chave PIX
+    </button>
+
+    <p id="msgCopiado" class="copiado hidden">
+      Chave PIX copiada
+    </p>
   </div>
 </section>
 
@@ -73,6 +85,19 @@
 <script>
 function mostrarPix() {
   document.getElementById("pix").classList.toggle("hidden");
+}
+
+function copiarPix() {
+  const chave = document.getElementById("pixKey").innerText;
+  const msg = document.getElementById("msgCopiado");
+
+  navigator.clipboard.writeText(chave).then(() => {
+    msg.classList.remove("hidden");
+
+    setTimeout(() => {
+      msg.classList.add("hidden");
+    }, 2000);
+  });
 }
 </script>
 

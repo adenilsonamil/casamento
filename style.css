@@ -288,3 +288,52 @@ footer {
     text-align: center;
   }
 }
+/* ===============================
+   DESTAQUE CARTÃO DE CRÉDITO
+   =============================== */
+
+.cartao-box {
+  margin-top: 30px;
+  padding: 22px 20px;
+  background: #faf9f6;
+  border: 1px solid #e5e2db;
+  border-radius: 6px;
+}
+
+/* TÍTULO DO CARTÃO */
+.cartao-box h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.15em;
+  margin-bottom: 8px;
+  color: #2f2f2f;
+}
+
+/* TEXTO DO CARTÃO */
+.cartao-box .cartao-texto {
+  font-size: 0.85em;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+/* BOTÕES DE VALOR — MAIS VISÍVEIS */
+.cartao-box .valores-cartao a {
+  padding: 12px 22px;
+  border: 1px solid #c1a46d;
+  border-radius: 4px;
+  background: #fff;
+  color: #2f2f2f;
+  font-size: 0.9em;
+}
+
+.cartao-box .valores-cartao a:hover {
+  background: #c1a46d;
+  color: #fff;
+}
+
+/* MOBILE — CONFORTO DE TOQUE */
+@media (max-width: 480px) {
+  .cartao-box .valores-cartao a {
+    width: 100%;
+    text-align: center;
+  }
+}

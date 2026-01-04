@@ -232,3 +232,59 @@ footer {
   font-size: 0.85em;
   color: #6a8f6a; /* verde discreto */
 }
+.btn-cartao {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 10px 22px;
+  border: 1px dashed #aaa;
+  color: #555;
+  font-size: 0.85em;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-cartao:hover {
+  border-color: #c1a46d;
+  color: #2f2f2f;
+}
+.divisor-pagamento {
+  width: 60%;
+  height: 1px;
+  background: #ddd;
+  margin: 25px auto;
+}
+
+.cartao-texto {
+  font-size: 0.85em;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.valores-cartao {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.valores-cartao a {
+  padding: 10px 18px;
+  border: 1px dashed #aaa;
+  color: #555;
+  font-size: 0.85em;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.valores-cartao a:hover {
+  border-color: #c1a46d;
+  color: #2f2f2f;
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .valores-cartao a {
+    width: 100%;
+    text-align: center;
+  }
+}

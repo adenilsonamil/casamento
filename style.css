@@ -1,339 +1,176 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Montserrat:wght@300;400&display=swap');
-
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 body {
-  background: #f6f4f1;
-  color: #2f2f2f;
   font-family: 'Montserrat', sans-serif;
-  line-height: 1.8;
-}
-
-/* CONTAINER PADRÃO */
-section {
-  max-width: 820px;
-  margin: 60px auto;
-  padding: 50px 40px;
-  background: #ffffff;
-  border-radius: 6px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-  text-align: center;
+  background: #f5f3f0;
+  color: #2f2f2f;
 }
 
 /* HERO */
 .hero {
-  margin-top: 80px;
+  min-height: 70vh;
+  background-image: url("https://i.ibb.co/bj5vHJH0/6bf48bda-b893-4b59-9ecf-99182a32cabb.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.35),
+    rgba(0,0,0,0.15),
+    rgba(245,243,240,0.95)
+  );
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 520px;
+  color: #fff;
 }
 
 .hero h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 3em;
+  font-size: 2.6em;
+  margin: 14px 0;
+}
+
+.hero-data {
+  font-size: 0.9em;
   letter-spacing: 1px;
-  margin-bottom: 15px;
 }
 
-.hero p {
-  font-size: 1.05em;
-  color: #555;
+.hero-texto {
+  font-size: 1em;
+  line-height: 1.5;
 }
 
-/* TÍTULOS */
+/* SEÇÕES */
+section {
+  padding: 48px 20px;
+  text-align: center;
+}
+
 h2 {
   font-family: 'Playfair Display', serif;
-  font-size: 2em;
-  margin-bottom: 20px;
-  position: relative;
+  font-size: 1.8em;
+  margin-bottom: 18px;
 }
 
-h2::after {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 2px;
-  background: #c1a46d; /* dourado discreto */
-  margin: 15px auto 0;
-}
-
-/* TEXTO */
-.info p,
-.presentes p {
-  font-size: 1em;
-  margin-bottom: 10px;
+/* MAPA */
+.btn-mapa {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 12px 22px;
+  border-radius: 30px;
+  background: #c2a57a;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
 }
 
 /* PRESENTES */
+.presentes .texto {
+  font-size: 0.95em;
+  color: #555;
+  margin-bottom: 28px;
+  line-height: 1.6;
+}
+
 .cotas {
-  margin-top: 30px;
+  display: grid;
+  gap: 12px;
+  max-width: 360px;
+  margin: 0 auto 24px;
 }
 
 .cotas button {
-  width: 100%;
-  max-width: 420px;
-  margin: 12px auto;
-  padding: 14px 20px;
-  background: transparent;
-  border: 1px solid #c1a46d;
-  color: #2f2f2f;
-  font-size: 0.95em;
-  letter-spacing: 0.5px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.cotas button:hover {
-  background: #c1a46d;
+  padding: 16px;
+  border-radius: 18px;
+  border: none;
+  background: linear-gradient(135deg, #c2a57a, #b89b6f);
   color: #fff;
+  font-weight: 600;
+  font-size: 1em;
+  cursor: pointer;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
-/* PIX */
+.cotas button:active {
+  transform: scale(0.98);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+
+/* PIX + CARTÃO */
 .pix {
-  margin-top: 35px;
+  background: #faf7f3;
+  padding: 24px;
+  border-radius: 16px;
+  max-width: 360px;
+  margin: 0 auto;
 }
 
 .pix img {
-  max-width: 180px;
-  margin: 20px 0;
+  width: 160px;
+  margin: 16px auto;
 }
 
-.pix p {
+.divisor {
+  height: 1px;
+  background: #ddd;
+  margin: 24px 0;
+}
+
+.cartao-box h3 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 10px;
+}
+
+.cartao-texto {
   font-size: 0.9em;
   color: #555;
+  margin-bottom: 14px;
 }
 
-/* FOOTER */
-footer {
-  max-width: 820px;
-  margin: 40px auto 80px;
-  text-align: center;
-  font-size: 0.85em;
-  color: #666;
+.valores-cartao {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.valores-cartao a {
+  padding: 12px;
+  background: #c2a57a;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 12px;
+  font-weight: 600;
 }
 
 /* UTIL */
 .hidden {
   display: none;
 }
-/* ===============================
-   RESPONSIVIDADE MOBILE
-   =============================== */
 
-@media (max-width: 768px) {
-
-  body {
-    line-height: 1.7;
-  }
-
-  section {
-    margin: 30px 15px;
-    padding: 35px 20px;
-  }
-
-  .hero {
-    margin-top: 40px;
-  }
-
-  .hero h1 {
-    font-size: 2.2em;
-  }
-
-  .hero p {
-    font-size: 0.95em;
-  }
-
-  h2 {
-    font-size: 1.6em;
-  }
-
-  h2::after {
-    width: 45px;
-  }
-
-  .info p,
-  .presentes p {
-    font-size: 0.95em;
-  }
-
-  .cotas button {
-    font-size: 0.95em;
-    padding: 16px;
-  }
-
-  .pix img {
-    max-width: 160px;
-  }
-
-  footer {
-    margin: 30px 15px 50px;
-    font-size: 0.8em;
-  }
-}
-
-/* MOBILE MUITO PEQUENO (celulares antigos) */
-@media (max-width: 420px) {
-
-  .hero h1 {
-    font-size: 1.9em;
-  }
-
-  h2 {
-    font-size: 1.4em;
-  }
-
-  .cotas button {
-    padding: 14px;
-  }
-}
-.local p {
-  margin-bottom: 20px;
-  font-size: 1em;
-}
-
-.endereco {
-  font-size: 0.9em;
-  color: #666;
-}
-
-.btn-mapa {
-  display: inline-block;
-  padding: 12px 28px;
-  border: 1px solid #c1a46d;
-  color: #2f2f2f;
-  text-decoration: none;
-  font-size: 0.95em;
-  transition: all 0.3s ease;
-}
-
-.btn-mapa:hover {
-  background: #c1a46d;
-  color: #fff;
-}
-.btn-copiar {
-  margin-top: 10px;
-  padding: 10px 20px;
-  background: transparent;
-  border: 1px solid #c1a46d;
-  color: #2f2f2f;
-  font-size: 0.9em;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.btn-copiar:hover {
-  background: #c1a46d;
-  color: #fff;
-}
-
-.copiado {
-  margin-top: 8px;
+footer {
+  padding: 32px 20px;
   font-size: 0.85em;
-  color: #6a8f6a; /* verde discreto */
-}
-.btn-cartao {
-  display: inline-block;
-  margin-top: 12px;
-  padding: 10px 22px;
-  border: 1px dashed #aaa;
-  color: #555;
-  font-size: 0.85em;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.btn-cartao:hover {
-  border-color: #c1a46d;
-  color: #2f2f2f;
-}
-.divisor-pagamento {
-  width: 60%;
-  height: 1px;
-  background: #ddd;
-  margin: 25px auto;
-}
-
-.cartao-texto {
-  font-size: 0.85em;
-  color: #666;
-  margin-bottom: 15px;
-}
-
-.valores-cartao {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: center;
-}
-
-.valores-cartao a {
-  padding: 10px 18px;
-  border: 1px dashed #aaa;
-  color: #555;
-  font-size: 0.85em;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.valores-cartao a:hover {
-  border-color: #c1a46d;
-  color: #2f2f2f;
-}
-
-/* Mobile */
-@media (max-width: 480px) {
-  .valores-cartao a {
-    width: 100%;
-    text-align: center;
-  }
-}
-/* ===============================
-   DESTAQUE CARTÃO DE CRÉDITO
-   =============================== */
-
-.cartao-box {
-  margin-top: 30px;
-  padding: 22px 20px;
-  background: #faf9f6;
-  border: 1px solid #e5e2db;
-  border-radius: 6px;
-}
-
-/* TÍTULO DO CARTÃO */
-.cartao-box h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.15em;
-  margin-bottom: 8px;
-  color: #2f2f2f;
-}
-
-/* TEXTO DO CARTÃO */
-.cartao-box .cartao-texto {
-  font-size: 0.85em;
-  color: #666;
-  margin-bottom: 15px;
-}
-
-/* BOTÕES DE VALOR — MAIS VISÍVEIS */
-.cartao-box .valores-cartao a {
-  padding: 12px 22px;
-  border: 1px solid #c1a46d;
-  border-radius: 4px;
-  background: #fff;
-  color: #2f2f2f;
-  font-size: 0.9em;
-}
-
-.cartao-box .valores-cartao a:hover {
-  background: #c1a46d;
-  color: #fff;
-}
-
-/* MOBILE — CONFORTO DE TOQUE */
-@media (max-width: 480px) {
-  .cartao-box .valores-cartao a {
-    width: 100%;
-    text-align: center;
-  }
+  color: #777;
+  text-align: center;
 }

@@ -15,7 +15,7 @@ body {
   min-height: 70vh;
   background-image: url("https://i.ibb.co/bj5vHJH0/6bf48bda-b893-4b59-9ecf-99182a32cabb.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: 57% center;
   position: relative;
   display: flex;
   align-items: center;
@@ -174,3 +174,4 @@ footer {
   color: #777;
   text-align: center;
 }
+

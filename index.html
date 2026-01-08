@@ -4,30 +4,32 @@
   <meta charset="UTF-8">
   <title>Jéssica & Adenilson</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Fontes -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<!-- HERO -->
 <section class="hero">
-  <p style="margin-top:15px; font-size:0.9em; color:#888;">
-    Agosto • Anápolis – GO
-  </p>
-
-  <h1>Jéssica & Adenilson</h1>
-  <p>
-    Com alegria e responsabilidade, decidimos dar este passo diante de Deus
-    e das pessoas que amamos.
-  </p>
+  <div class="hero-content">
+    <p class="hero-data">Agosto • Anápolis – GO</p>
+    <h1>Jéssica & Adenilson</h1>
+    <p class="hero-texto">
+      Com alegria e responsabilidade, decidimos dar este passo diante de Deus
+      e das pessoas que amamos.
+    </p>
+  </div>
 </section>
 
+<!-- LOCAL -->
 <section class="local">
   <h2>Local da cerimônia</h2>
-
   <p>
     Igreja Católica – Anápolis<br>
-    <span class="endereco">
-      Endereço da igreja, Anápolis – GO
-    </span>
+    <span class="endereco">Endereço da igreja, Anápolis – GO</span>
   </p>
 
   <a
@@ -39,65 +41,62 @@
   </a>
 </section>
 
+<!-- PRESENTES -->
 <section class="presentes">
   <h2>Como presentear</h2>
+
   <p class="texto">
     Já construímos nosso lar e não esperamos presentes.<br>
     Para quem desejar participar de forma simbólica deste novo passo,
     deixamos abaixo algumas formas de contribuição, todas opcionais.
   </p>
 
-  <div class="cotas">
-    <button onclick="mostrarPix()">🏡 Construção do nosso lar</button>
-    <button onclick="mostrarPix()">🔥 Almoço de celebração</button>
-    <button onclick="mostrarPix()">🌱 Projeto família</button>
-    <button onclick="mostrarPix()">✈️ Lua de mel</button>
-    <button onclick="mostrarPix()">❤️ Apoio ao nosso início</button>
-  </div>
+<div class="cotas">
+  <button id="btnContribuir" onclick="mostrarContribuicao()">
+    💛 Clique aqui e contribua com o nosso início juntos
+  </button>
+</div>
+<p class="motivos">
+  Sua contribuição nos ajuda em nosso início juntos, na construção do nosso lar,
+  na lua de mel e nos primeiros passos como família.
+</p>
 
-  <div id="pix" class="pix hidden">
-  <p>Se desejar contribuir de forma prática, escolha uma das opções abaixo:</p>
 
   <!-- PIX -->
-  <img src="assets/pix.png" alt="QR Code PIX">
+  <div id="pix" class="pix hidden">
+    <p>Se desejar contribuir de forma prática, utilize uma das opções abaixo:</p>
 
-  <p class="pix-chave">
-    Chave PIX:
-    <strong id="pixKey">59c552b7-aa3a-4d5c-accf-e9c88ecaad44</strong>
-  </p>
+    <img src="assets/pix.png" alt="QR Code PIX">
 
-  <button class="btn-copiar" onclick="copiarPix()">
-    Copiar chave PIX
-  </button>
+    <p class="pix-chave">
+      Chave PIX:
+      <strong id="pixKey">59c552b7-aa3a-4d5c-accf-e9c88ecaad44</strong>
+    </p>
 
-  <p id="msgCopiado" class="copiado hidden">
-    Chave PIX copiada
-  </p>
+    <button class="btn-copiar" onclick="copiarPix()">Copiar chave PIX</button>
 
-<!-- DIVISOR -->
-<div class="divisor-pagamento"></div>
+    <p id="msgCopiado" class="copiado hidden">Chave PIX copiada</p>
 
-<!-- CARTÃO COM VALORES -->
-<div class="cartao-box">
-  <h4>Cartão de crédito</h4>
+    <!-- DIVISOR -->
+    <div class="divisor"></div>
 
-  <p class="cartao-texto">
-    Se preferir, selecione um dos valores abaixo para contribuir por cartão.
-  </p>
+    <!-- CARTÃO -->
+    <div class="cartao-box">
+      <h3>Cartão de crédito</h3>
+      <p class="cartao-texto">
+        Se preferir, escolha um valor para contribuir por cartão.
+      </p>
 
-  <div class="valores-cartao">
-    <a href="https://payment-link-v3.ton.com.br/pl_2beBp1A0Y3nVoZES1hNPXK9wdzMRlGZa" target="_blank">R$ 100,00</a>
-    <a href="https://payment-link-v3.ton.com.br/pl_a3rMDe6j1VxW5DdcWSBE5284wBZzGLoK" target="_blank">R$ 200,00</a>
-    <a href="https://payment-link-v3.ton.com.br/pl_VomBz9pE7NQPLRuYLuvRbM8JaKxAelg2" target="_blank">R$ 300,00</a>
-    <a href="https://payment-link-v3.ton.com.br/pl_501p84gkODobAM1cp3uqbRq6alzK3dML" target="_blank">R$ 400,00</a>
-    <a href="https://payment-link-v3.ton.com.br/pl_OeYNGgLX7yjVKdWhW4uzvABn05R9ov6P" target="_blank">R$ 500,00</a>
-    <a href="https://payment-link-v3.ton.com.br/pl_qnJab6eyXNP0qaUDRSWe0GgDlB8EZpjx" target="_blank">R$ 1.000,00</a>
+      <div class="valores-cartao">
+        <a href="https://payment-link-v3.ton.com.br/pl_2beBp1A0Y3nVoZES1hNPXK9wdzMRlGZa" target="_blank">R$ 100</a>
+        <a href="https://payment-link-v3.ton.com.br/pl_a3rMDe6j1VxW5DdcWSBE5284wBZzGLoK" target="_blank">R$ 200</a>
+        <a href="https://payment-link-v3.ton.com.br/pl_VomBz9pE7NQPLRuYLuvRbM8JaKxAelg2" target="_blank">R$ 300</a>
+        <a href="https://payment-link-v3.ton.com.br/pl_501p84gkODobAM1cp3uqbRq6alzK3dML" target="_blank">R$ 400</a>
+        <a href="https://payment-link-v3.ton.com.br/pl_OeYNGgLX7yjVKdWhW4uzvABn05R9ov6P" target="_blank">R$ 500</a>
+        <a href="https://payment-link-v3.ton.com.br/pl_qnJab6eyXNP0qaUDRSWe0GgDlB8EZpjx" target="_blank">R$ 1.000</a>
+      </div>
+    </div>
   </div>
-</div>
-
-
-
-  
 </section>
 
 <footer>
@@ -108,8 +107,20 @@
 </footer>
 
 <script>
-function mostrarPix() {
-  document.getElementById("pix").classList.toggle("hidden");
+function mostrarContribuicao() {
+  const box = document.getElementById("pix");
+  const btn = document.getElementById("btnContribuir");
+
+  box.classList.remove("hidden");
+
+  btn.innerText = "💛 Formas de contribuição abaixo";
+  btn.disabled = true;
+  btn.style.opacity = "0.7";
+
+  box.scrollIntoView({
+    behavior: "smooth",
+    block: "start"
+  });
 }
 
 function copiarPix() {
@@ -118,13 +129,11 @@ function copiarPix() {
 
   navigator.clipboard.writeText(chave).then(() => {
     msg.classList.remove("hidden");
-
-    setTimeout(() => {
-      msg.classList.add("hidden");
-    }, 2000);
+    setTimeout(() => msg.classList.add("hidden"), 2000);
   });
 }
 </script>
+
 
 </body>
 </html>
